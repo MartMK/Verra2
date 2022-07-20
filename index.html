@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">  
+     <title>Survey</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- For material design -->
+    <!-- Font Awesome -->
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Assistant">
+<!-- MDB -->
+<link rel="stylesheet" href="./css/mdb.min.css"/>
+
+<link rel="stylesheet" href="./css/style.css">
+
+
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script src="./js/mdb.min.js"></script>
+
+<!-- Material design -->
+<!-- MDB -->
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
+></script>
+
+<script src="https://code.highcharts.com/highcharts.src.js"></script>
+<script src="./js/donut.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Leaflet CDN -->
+<link rel="stylesheet" href="./css/leaflet.css" />
+<script src="./js/leaflet.js"></script>
+<!-- 
+Highchart Start -->
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<!-- Highchart End -->
+
+
+
+
+
+</head>
+<body>
+<header>
+
+</header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div id="container2"></div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  Highcharts.chart('container2', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Themes'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    accessibility: {
+        point: {
+            valueSuffix: '%'
+        }
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+            }
+        }
+    },
+    series: [{
+        name: 'Themes',
+        colorByPoint: true,
+        data: [{
+            name: 'Due Dilligence',
+            y: 20,
+            sliced: true,
+            selected: true
+        }, {
+            name: 'Human and Labour rights',
+            y: 18
+        }, {
+            name: 'Credibility',
+            y: 33
+        },{
+            name: 'Sustainable Business',
+            y: 6
+        },{
+            name: 'Gender',
+            y: 4
+        },{
+            name: 'Environment and Climate change',
+            y: 20
+        }]
+    }]
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<script>
+   window.onload = function(){
+     //  This is for the v
+
+  
+  var ctx_v = document.getElementById("canvas_v").getContext("2d");
+  window.myBar = new Chart(ctx_v, {
+    type: "bar",
+    data: barChartData_v,
+    options: chartOptions_v
+  });
+  var ctx_b = document.getElementById("canvas_b").getContext("2d");
+  window.myBar = new Chart(ctx_b, {
+    type: "bar",
+    data: barChartData_b,
+    options: chartOptions_b
+  });
+  var ctxb = document.getElementById("canvasb").getContext("2d");
+  window.myBar = new Chart(ctxb, {
+    type: "bar",
+    data: barChartDatab,
+    options: chartOptionsb
+  });
+  var ctx_g = document.getElementById("canvas_g").getContext("2d");
+  window.myBar = new Chart(ctx_g, {
+    type: "bar",
+    data: barChartData_g,
+    options: chartOptions_g
+  });
+  var ctx_p = document.getElementById("canvas_p").getContext("2d");
+  window.myBar = new Chart(ctx_p, {
+    type: "bar",
+    data: barChartData_p,
+    options: chartOptions_p
+  });
+
+
+
+
+
+
+
+
+        
+ }
+
+
+
+
+
+
+
+
+
+var triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
+triggerTabList.forEach(function (triggerEl) {
+var tabTrigger = new bootstrap.Tab(triggerEl)
+
+triggerEl.addEventListener('click', function (event) {
+  event.preventDefault()
+  tabTrigger.show()
+})
+})
+</script>
+
+
+</html>
+
+
+
+
+
+
+
